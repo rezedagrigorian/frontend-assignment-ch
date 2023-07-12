@@ -1,5 +1,6 @@
 import axios from 'axios';
-import Company from '../types/Company';
+
+import Company from '../types/company';
 
 const API_URL = 'https://api.npoint.io/71f89217a977fde7a80b';
 

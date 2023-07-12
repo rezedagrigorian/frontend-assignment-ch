@@ -1,0 +1,62 @@
+.add_company {
+  align-items: center;
+  column-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+  width: 50%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    row-gap: 0;
+    width: 50%;
+  }
+}
+
+.add_company > button {
+  background-color: #252631;
+  border: 1px solid #f9d708;
+  border-radius: 5px;
+  color: #fdfaf9;
+  font-size: 16px;
+  font-weight: 600;
+  height: 100%;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #f9d708;
+    color: #252631;
+    cursor: pointer;
+  }
+}
+
+.add_company > input {
+  background-color: #252631;
+  border: 1px solid #fdfaf9;
+  border-radius: 5px;
+  color: #fdfaf9;
+  font-size: 16px;
+  height: 100%;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.add_company > input:focus::placeholder {
+  color: transparent;
+} 
+
+.add_company_name {
+  color: #fdfaf9;
+}

@@ -1,12 +1,10 @@
 import React from 'react';
-import './App.css';
-import CompanyList from './components/CompanyList';
+import './styles/App.css';
+import CompanyList from './components/CompanyList/CompanyList';
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <CompanyList />
-    </header>
+  <div className="app">
+    <CompanyList />
   </div>
 );
 

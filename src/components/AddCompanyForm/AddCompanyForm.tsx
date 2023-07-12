@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-import Company from '../types/Company';
+import Company from '../../types/company';
+import styles from './AddCompanyForm.module.css';
 
 interface AddCompanyFormProps {
   addCompany: (company: Company) => void;
@@ -28,8 +29,8 @@ const AddCompanyForm: React.FC<AddCompanyFormProps> = ({ addCompany }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <label htmlFor="name">Name</label>
+    <form onSubmit={onSubmit} className={styles.add_company}>
+      <label htmlFor="name" className={styles.add_company_name}>Name:</label>
       <input name="name" onChange={handleChange} value={name} />
       <button type="submit">Add</button>
     </form>

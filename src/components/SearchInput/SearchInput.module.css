@@ -1,0 +1,35 @@
+.search_container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    width: 50%;
+  }
+}
+
+.search_container > input {
+  background-color: #252631;
+  border: 1px solid #fdfaf9;
+  border-radius: 5px;
+  color: #fdfaf9;
+  font-size: 16px;
+  height: 100%;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #fdfaf9ad;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}

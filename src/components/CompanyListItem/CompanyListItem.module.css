@@ -1,0 +1,13 @@
+.company_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.company_item_name {
+  color: #fdfaf9;
+}
+
+.company_item_capitalization {
+  color: #fdfaf9;
+}

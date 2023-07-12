@@ -1,0 +1,55 @@
+.sorting_bar {
+  align-items: center;
+  column-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px;
+  row-gap: 15px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    row-gap: 0;
+  }
+}
+
+.sorting_bar > button {
+  background-color: #252631;
+  border: 1px solid #f9d708;
+  border-radius: 5px;
+  color: #fdfaf9;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 30px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #f9d708;
+    color: #252631;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: #252631;
+    color: #fdfaf9;
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover {
+    background-color: #252631;
+    color: #fdfaf9;
+  }
+
+  &:disabled:focus {
+    outline: none;
+  }
+}
+
+.sorting_title {
+  color: #fdfaf9;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
