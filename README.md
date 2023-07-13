@@ -1,6 +1,10 @@
 # Frontend Assignment
 
-## Use cases
+## Deployment
+
+https://quiet-elf-435e04.netlify.app/
+
+## Used cases
 1. View company list
 2. Add new company
 3. Remove company( not possible due to limitations https://www.npoint.io/)
@@ -21,11 +25,6 @@ To get started with this project, simply clone the repository and run the follow
 npm install
 npm start
 ```
-
-##  GitHub Pages Deployment
-
- https://sleepycodingfox.github.io/
-
 
 ##  License
 
