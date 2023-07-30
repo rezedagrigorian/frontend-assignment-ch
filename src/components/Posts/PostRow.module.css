@@ -1,0 +1,23 @@
+.post_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.post_item_name {
+  max-width: 700px;
+  width: 100%;
+  color: #fdfaf9;
+  line-height: 1.5;
+}
+
+.post_item > button {
+  height: 40px;
+  width: 30px;
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #fdfaf9;
+  color: #000;
+  cursor: pointer;
+}

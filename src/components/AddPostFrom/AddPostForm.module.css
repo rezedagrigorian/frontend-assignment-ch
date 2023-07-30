@@ -1,0 +1,69 @@
+.add_post {
+  align-items: center;
+  column-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+  width: 50%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    row-gap: 0;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.add_post > button {
+  background-color: #252631;
+  border: 1px solid #f9d708;
+  border-radius: 5px;
+  color: #fdfaf9;
+  font-size: 16px;
+  font-weight: 600;
+  height: 100%;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  max-width: 195px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #f9d708;
+    color: #252631;
+    cursor: pointer;
+  }
+}
+
+.add_post > input {
+  background-color: #252631;
+  border: 1px solid #fdfaf9;
+  border-radius: 5px;
+  color: #fdfaf9;
+  font-size: 16px;
+  height: 100%;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px 10px;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.add_post > input:focus::placeholder {
+  color: transparent;
+} 
+
+.add_post_name {
+  color: #fdfaf9;
+  max-width: 100px;
+  width: 100%;
+  align-self: start;
+}

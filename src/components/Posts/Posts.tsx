@@ -1,28 +1,50 @@
 import React, { useState, useEffect } from 'react';
-import { fetchPosts } from '../../api/companies';
-import companyListStyles from '../CompanyList/CompanyList.module.css';
-import Post from '../../types/posts';
-import companyListItemStyles from '../CompanyListItem/CompanyListItem.module.css';
+
+import { fetchPosts, addPost, deletePost } from '../../api/posts';
+
+import Post from '../../types/post';
+import AddPostForm from '../AddPostFrom/AddPostForm';
+import PostRow from './PostRow';
+
+import styles from '../CompanyList/CompanyList.module.css';
 
 const Posts: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
 
+  const loadPosts = async () => {
+    const data = await fetchPosts();
+    setPosts(data);
+  };
+
   useEffect(() => {
-    fetchPosts().then((data) => setPosts(data));
+    loadPosts();
   }, []);
 
+  const handleAddPost = (post: Post) => {
+    addPost(post)
+      .then(() => loadPosts())
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleDeletePost = (id: string) => {
+    deletePost(id)
+      .then(() => loadPosts())
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
-    <div className={companyListStyles.company_container}>
-      <h2 className={companyListStyles.company_container_title}>Posts</h2>
-      <div className={companyListStyles.company_search}>
+    <div className={styles.company_container}>
+      <h2 className={styles.company_container_title}>Posts</h2>
+      <div className={styles.company_search}>
         hey
       </div>
-      <ul className={companyListStyles.company_list}>
-        {posts.map((post) => (
-          <li key={post.id} className={companyListItemStyles.company_item}>
-            <p className={companyListItemStyles.company_item_name}>{post.title}</p>
-          </li>
-        ))}
+      <AddPostForm addPost={handleAddPost} />
+      <ul className={styles.company_list}>
+        {posts.map((post) => <PostRow post={post} deletePost={handleDeletePost} />)}
       </ul>
     </div>
   );
