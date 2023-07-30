@@ -14,3 +14,33 @@
   column-gap: 50px;
   margin: 26px 0 0 0;
 }
+
+.tab_registrations {
+  align-self: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #2e2f39;
+  list-style: none;
+  border-radius: 5px 5px 0 0;
+  margin-left: auto;
+}
+
+.tab_registrations > button {
+  background-color: #252631;
+  border: 1px solid #f9d708;
+  border-radius: 5px;
+  color: #fdfaf9;
+  font-size: 16px;
+  font-weight: 600;
+  height: 100%;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  width: 195px;
+  cursor: pointer;
+}
+
+.tab_registrations > button:hover {
+  background-color: #f9d708;
+  color: #252631;
+}
